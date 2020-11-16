@@ -1,0 +1,34 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(84, 196, 122, 0.8),
+      rgba(40, 180, 133, 0.8)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  &__logo-box {
+    position: absolute;
+    margin-top: 4rem;
+    margin-left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__text-box {
+    // elementos centralizados
+    position: absolute;
+    top: 40%; // 40% do elemento pai
+    left: 50%; //50% do elemento pai
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    // disfarça a instabilidade de algumas animações
+    backface-visibility: hidden;
+  }
+}
