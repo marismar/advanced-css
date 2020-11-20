@@ -19,6 +19,10 @@ body {
 
     // animation-delay: 3s;
     // animation-iteration-count: 3;
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-family: 5rem;
+    }
   }
 
   &--sub {
@@ -26,6 +30,10 @@ body {
     font-size: 2rem;
     letter-spacing: 1.74rem;
     animation: moveInRight 0.8s ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -44,6 +52,13 @@ body {
   // -webkit-text-fill-color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
